@@ -1,0 +1,8 @@
+write
+
+opendir
+	-> ouvre rep, return un poineur sur celui-ci
+readdir
+	-> consulter un rep, return pointeur sur struct dirent
+stat
+	-> obtenir l'etat d'un fichier, return inf fichier

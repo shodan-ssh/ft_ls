@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_ls.c                                          .::    .:/ .      .::   */
+/*   ft_strrev.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: almalfoy <almalfoy@student.le-101.fr>      +:+   +:    +:    +:+     */
+/*   By: almalfoy <marvin@le-101.fr>                +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/02/09 17:38:36 by almalfoy     #+#   ##    ##    #+#       */
-/*   Updated: 2018/02/09 17:52:33 by almalfoy    ###    #+. /#+    ###.fr     */
+/*   Created: 2017/11/26 14:29:57 by almalfoy     #+#   ##    ##    #+#       */
+/*   Updated: 2017/11/26 14:30:36 by almalfoy    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "ft_ls.h"
+#include "libft.h"
 
-							/* Options ls */
-
-// -l  ->
-
-
-int		main(int argc, char **argv)
+char	*ft_strrev(char *str)
 {
+	char	c;
+	int		i;
+	int		j;
 
-	return (0);
+	i = 0;
+	j = ft_strlen((str));
+	j--;
+	while (j > i)
+	{
+		c = str[i];
+		str[i] = str[j];
+		str[j] = c;
+		i++;
+		j--;
+	}
+	return (str);
 }
